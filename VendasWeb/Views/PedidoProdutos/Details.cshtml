@@ -1,0 +1,57 @@
+﻿@model VendasWeb.PedidoProduto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Cadastro de Itens do Pedido - Detalhar</h2>
+
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Item")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Pedido")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PedidoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Produto")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index", new { id = Model.Id })
+</p>
